@@ -8,7 +8,7 @@ const mockData = [
 ];
 export const ejercicio2 = async () => {
   console.log("------------------------Entrega 2---------");
-  const contenedor = new Contenedor("productos");
+  const contenedor = new Contenedor("productos.json");
 
   //  guarda los productos y devuelve el ID asignado incremental
 
@@ -16,7 +16,7 @@ export const ejercicio2 = async () => {
 
   for (let data of mockData) {
     const id = await contenedor.save(data);
-    console.log("Ej1)", data, `Se guardo el producto con id: ${id}`);
+    console.log("Ej1)", data, `Se guardo el producto con id:   ${id}`);
   }
 
   console.log("Ej2)  Busqueda por id con id en 2", contenedor.getById(2));
@@ -30,7 +30,7 @@ export const ejercicio2 = async () => {
   console.log("ej5) Busco por id al 1 ", contenedor.getById(1));
   console.log("ej5) Busco por id al 2 ya eliminado ", contenedor.getById(2));
   console.log("Ej6) Elimino todos los productos");
-  contenedor.deleteAll();
+  //contenedor.deleteAll();
 
   console.log("Imprimo una vez  eliminados", contenedor.getAll());
 };
