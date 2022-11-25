@@ -16,10 +16,10 @@ function getSeconds(x: number): string {
 }
 
 function getMinutes(x: number): string {
-  if (Math.floor(x / 3600) > 0) {
-    const minutes = Math.ceil((x % 3600) / 60);
+  /*   if (Math.floor(x / 3600) > 0) {
+    const minutes = Math.floor((x % 3600) / 60);
     return minutes ? `${minutes}m` : "";
-  }
+  } */
   const minutes = Math.floor((x / 60) % 60);
 
   return minutes ? `${minutes}m` : "";
